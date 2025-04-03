@@ -1,0 +1,47 @@
+<style> 
+    .div-3 {
+      background-color:rgb(186, 177, 231);
+      color: black;
+    }
+  
+    .buttonStyle{
+      margin-left: 50px;
+      background-color: whitesmoke;
+      ;
+    }
+  
+    .buttonStyle:hover{
+      background-color: rgb(150, 174, 185);
+    }
+  
+    .buttonStyle:active{
+      background-color: rgb(161, 227, 176);;
+    }
+  
+    .imageStyle{
+      height: 75px;
+      width: 75px;
+    }
+  
+  </style>
+  
+  <script src="./homePage.js"></script>
+  
+  <body>
+    <h1 class="div-3">CLINIC MANAGEMENT SYSTEM - RECEPTION HOME PAGE</h1>
+  
+    <button class="buttonStyle" onclick="openAppointmentPage()">
+      <img class="imageStyle" src = "../Images/appointment.jpg"></img>
+      <p>Appointment</p>
+    </button>
+  
+    <button class="buttonStyle" onclick="openRegistrationPage()">
+      <img class="imageStyle" src = "../Images/registration.png"></img>
+      <p>Registration</p>
+    </button>
+  
+    <button class="buttonStyle" onclick="openBillingPage()">
+      <img class="imageStyle" src = "../Images/billing.jpg"></img>
+      <p>Billing</p>
+    </button>
+  </body>

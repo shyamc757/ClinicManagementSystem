@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# XAMPP or local config
+*.log
+*.env
+config.php
+
+# Backup or temp files
+*.bak
+*.tmp
+*.swp

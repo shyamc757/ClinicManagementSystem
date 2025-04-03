@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+                   initial-scale=1.0">
+    <style>
+        .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 35%;
+            font-weight: bolder;
+        }
+
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .close {
+            display: none;
+        }
+
+        h1 {
+            color: rgba(255, 166, 0, 1);
+        }
+
+        .popup-content input {
+            width: 300px;
+            height: 10px;
+            border-radius: 25px;
+            border: none;
+            padding: 10px;
+        }
+
+        .popup-content select {
+            width: 300px;
+            height: 35px;
+            border-radius: 25px;
+            border: none;
+            padding: 10px;
+        }
+
+        .input_field {
+            background-color: rgba(101, 222, 241, 0.5);
+            margin-left: 20px;
+            padding: 15px;
+        }
+
+        .input_field_disabled {
+            background-color: rgba(128, 128, 128, 0.5);
+            margin-left: 20px;
+            padding: 15px;
+        }
+
+        .box {
+            width: 25px;
+            height: 25px;
+        }
+
+
+        .button-Submit {
+            color: black;
+            padding: 15px 25px;
+            background-color: #b5f0f0;
+            background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+            border-radius: 14px;
+            font-weight: bold;
+            font-size: 12px;
+            border: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            cursor: pointer;
+        }
+
+
+        .button-Close {
+            color: black;
+            padding: 15px 25px;
+            background-color: #f15a5a;
+            background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+            border-radius: 14px;
+            font-weight: bold;
+            font-size: 12px;
+            border: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <h1>
+                Add/Edit Appointment
+            </h1>
+
+            <div class="box"></div>
+            <div>
+                Employee ID &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id = "input_employee_id" class="input_field_disabled" type="text" placeholder="Auto-Filled/Generated" disabled></input>
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Employee Name &nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id = "input_employee_name" class="input_field" type="text"></input>
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Department Code &nbsp&nbsp&nbsp
+                <input id = "input_dep_code" class="input_field" type="text"></input>
+                <!-- <select class="input_field" type="text">
+                    <option>DEP1</option>
+                    <option>DEP2</option>
+                    <option>DEP3</option>
+                </select> -->
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Employee Address &nbsp&nbsp
+                <input id = "input_employee_address" class="input_field" type="text"></input>
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Employee email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id = "input_employee_email" class="input_field" type="text"></input>
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Employee Phone No.
+                <input id = "input_employee_phone" class="input_field" type="text"></input>
+            </div>
+
+            <div class="box"></div>
+            <div>
+                Designation &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id = "input_employee_designation" class="input_field" type="text"></input>
+            </div>
+
+            <div class="box"></div>
+            <div style="display: flex;">
+                <button id="closePopup" class="button-Close" onclick="closeForm()">
+                    Close
+                </button>
+                <button id="submitPopup" class="button-Submit" onclick="submitForm()">
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        myPopup.classList.add("show")
+    </script>
+</body>
+
+</html>

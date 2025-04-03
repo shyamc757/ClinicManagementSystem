@@ -1,0 +1,88 @@
+<style>
+  body {
+    background-color: rgb(174, 213, 226);
+  }
+  .rectangle {
+    width: 500px;
+    height: 125px;
+    background: rgb(75, 114, 215);
+    margin-left: 33.5%;
+    margin-top: 2.5%;
+  }
+</style>
+
+<script src="./login_page_2.js"></script>
+
+<body>
+  <h1
+    style="
+      font-family: Calibri;
+      padding-top: 5%;
+      padding-left: 31.5%;
+      font-size: 50px;
+    "
+  >
+    Clinic Management System
+  </h1>
+  <img
+    src="Images/second_healthcare.jpg"
+    style="padding-left: 45%"
+    width="150"
+    height="180"
+  />
+
+  <div class="rectangle">
+    <div>
+      <div>
+        <p
+          style="
+            color: aliceblue;
+            padding-left: 10%;
+            padding-top: 5%;
+            font-family: Calibri;
+          "
+        >
+          Username:
+          <input
+            id = "Username"
+            size="40"
+            style="margin-left: 1%; background-color: rgb(143, 170, 220)"
+          />
+        </p>
+      </div>
+    </div>
+    <div>
+      <p
+        style="
+          color: aliceblue;
+          padding-left: 10%;
+          padding-top: 4%;
+          font-family: Calibri;
+        "
+      >
+        Password:
+        <input
+          size="40"
+          id = "Password"
+          style="margin-left: 2%; background-color: rgb(143, 170, 220)"
+        />
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px">
+    <button
+      onclick="login()"
+      style="
+        width: 200px;
+        padding: 10px;
+        background-color: rgb(75, 114, 215);
+        color: aliceblue;
+        font-family: Calibri;
+        font-size: 12px;
+      "
+    >
+      Login
+    </button>
+  </div>
+</body>

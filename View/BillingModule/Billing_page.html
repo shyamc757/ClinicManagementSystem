@@ -1,0 +1,250 @@
+<style>
+  .div-3 {
+    background-color: rgba(186, 177, 231, 0.6);
+    color: black;
+  }
+  
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  }
+  
+  th, td {
+  text-align: left;
+  padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+  background-color: D6EEEE;
+  }
+
+  .search{
+    float:left;
+    margin:10px;
+    width: 100%;
+    height: 5%;
+  }
+  
+  .box{
+  width: 50px;
+  height: 50px;
+  }
+
+    /* styling search bar */
+  .search input {
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+    }
+
+  .search_field{
+    background-color: rgba(101, 222, 241, 0.5);
+    margin-left: 20px;
+    padding: 15px;
+  }
+
+  /* .add_button{
+    margin-left: 300px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+  }
+
+  .add_button:hover{
+    background-color: rgb(150, 174, 185);
+  }
+
+  .add_button:active{
+    background-color: rgb(161, 227, 176);;
+  } */
+
+  /* .search_button{
+    margin-left: 50px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .search_button:hover{
+    background-color: rgb(150, 174, 185);
+  }
+
+  .search_button:active{
+    background-color: rgb(161, 227, 176);;
+  } */
+
+  .imageStyle{
+    height: 35px;
+    width: 35px;
+  }
+
+  .search_button {
+    background-image: linear-gradient(92.88deg,rgb(186, 177, 231) 9.16%, rgb(150, 139, 223) 43.89%, rgb(114, 99, 212) 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    height: 50px;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .search_button:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+  }
+
+  @media (min-width: 768px) {
+    .search_button {
+      padding: 0 2.6rem;
+    }
+  }
+
+    .add_button {
+    margin-left: 50px;
+    background-image: linear-gradient(92.88deg,rgb(92, 80, 88) 9.16%, rgb(79, 57, 73) 43.89%, rgb(68, 37, 59) 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    height: 50px;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  /* .add_button:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+  } */
+
+  @media (min-width: 768px) {
+    .add_button {
+    margin-left: 50px;
+      padding: 0 2.6rem;
+    }
+  }
+
+  .edit_tableitem_button {
+    background-color: rgba(255, 166, 0,0.5);
+  }
+
+  .delete_tableitem_button {
+    background-color: rgba(255,0,0,0.5);
+  }
+
+</style>
+
+<script type="text/javascript" src="./Billing.js"></script>
+
+<body>
+  <h1 class="div-3">CLINIC MANAGEMENT SYSTEM - BILLING</h1>
+
+  <div class="search">
+
+      <input  id = "search_billing_id" class="search_field", type="text"
+              placeholder="Billing ID">
+      </input>
+
+      <input  id = "search_patient_id" class="search_field" type="text"
+              placeholder="Patient ID">
+      </input>
+
+      <input  id = "search_patient_name" class="search_field" type="text"
+              placeholder="Patient Name">
+      </input>
+
+      <input  id = "search_appointment_id" class="search_field" type="text" 
+            placeholder="Appointment ID"> 
+        </input>
+        
+  </div>
+
+  <div class="search">
+
+    <input  id = "search_billing_date" class="search_field" type="datetime-local" title="Billing Date"></input>
+
+    <input  id="search_bill_paid_date" class="search_field" type="datetime-local" title="Bill Paid Date"></input>
+      
+</div>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<div id="form-container"></div> <!-- This is where the form -->
+
+<div>
+    
+  <button class="search_button" onclick="searchRequest()"> SEARCH &#128269
+  </button>
+
+  <button class="add_button" onclick="openForm()" disabled> ADD &#10133
+  </button>
+</div>
+
+<div class="box"></div>
+
+  <table id = "BillingTable">
+    <tr>
+      <th>Billing ID</th>
+      <th>Patient ID</th>
+      <th>Patient Name</th>
+      <th>Appointment ID</th>
+      <th>Billing Date</th>
+      <th>Bill Paid Date</th>
+      <th>Billing Amount</th>
+      <th>User Action</th>
+    </tr>
+    <!-- <tr>
+      <td>4234987</td>
+      <td>234987</td>
+      <td>Iestyn Vonahe'e</td>
+      <td>2039812</td>
+      <td>11/5/2023</td>
+      <td>11/5/2023</td>
+      <td>$100.00</td>
+      <td>
+        <button class="edit_tableitem_button" title="Edit">&#x270E</button>
+        <button class="delete_tableitem_button" title="Delete">&#x1F5D1</button>
+      </td>
+    </tr>
+    <tr>
+      <td>4236728</td>
+      <td>468726</td>
+      <td>Hanna Albert</td>
+      <td>695348</td>
+      <td>09/16/2023</td>
+      <td>NA(Unpaid)</td>
+      <td>$150.00</td>
+      <td>
+        <button class="edit_tableitem_button" title="Edit">&#x270E</button>
+        <button class="delete_tableitem_button" title="Delete">&#x1F5D1</button>
+      </td> -->
+    </tr>
+  </table>
+
+
+  <script>
+    window.addEventListener("load" ,(e) =>  {
+      searchRequest();
+    }) 
+  </script>
+</body>
